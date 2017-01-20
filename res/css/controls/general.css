@@ -1,0 +1,61 @@
+
+main>.controls {
+    padding-top: 29px;
+    margin-bottom: 15px;
+}
+
+main>.controls>:last-child>* {
+    margin-left: 12px; 
+}
+
+main>.controls>:first-child>* {
+    margin-right: 12px; 
+}
+
+.block>.controls {
+    margin-top: 5px;
+}
+
+.block>.controls>* {
+    margin-left: 20px;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9
+}
+tr:hover {
+  background-color: #2fa7cd;
+}
+
+@media screen and (max-width: 1024px) {
+  
+
+    
+    main>.controls {
+        padding-left: 18px;
+        padding-right: 18px;
+        margin-bottom: -4px;
+    }
+    
+    main>.controls>div>* {
+        margin-left: 12px;
+        margin-right: 12px;
+        margin-bottom: 15px;
+    }
+    
+    .block>.controls {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .block>.controls>* {
+        margin-bottom: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    .col-1{
+        display:none;      
+    }
+    
+}

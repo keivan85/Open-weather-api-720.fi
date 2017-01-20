@@ -1,0 +1,148 @@
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    background-color: #2fa7cd;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 5px 11px 6px;
+    border: 1px solid #2fa7cd;
+    text-decoration: none;
+}
+
+.btn:hover,
+.btn.active {
+    background-color: #fff;
+    color: #2fa7cd;
+    font-weight: 500;
+}
+
+.btn.circular {
+    border: none;
+    border-radius: 100%;
+    width: 34px;
+    height: 34px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    padding: 0;
+}
+
+.btn.circular {
+    background-color: #fff;
+}
+
+.btn.circular:hover,
+.btn.circular.active {
+    background-color: #2fa7cd;
+    color: #fff;
+}
+
+.btn.circular.bordered:hover,
+.btn.circular.bordered.active {
+    border-color: #2fa7cd;
+}
+
+.btn.bordered {
+    border-width: 2px;
+    border-style:  solid;
+}
+
+.btn.help-ico {
+    width: 16px;
+    height: 16px;
+    line-height: 15px;
+    font-weight: 500;
+    font-size: 134%;
+}
+
+.btn.menu:after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 12px;
+    background: url('../../img/sprite.png');
+    background-size: 1024px 1024px;
+    background-position: 0 -19px;
+    vertical-align: top;
+    margin-top: 11px;
+}
+
+.btn.menu.active:after,
+.btn.menu:hover:after {
+    background-position: -17px -19px;
+}
+
+.bookmark::before {
+    content: '';
+    width: 10px;
+    height: 14px;
+    display: inline-block;
+    background: url('../../img/sprite.png');
+    background-size: 1024px 1024px;
+    background-position: -48px -19px;
+    margin-right: 10px;
+    vertical-align: text-bottom;
+    margin-bottom: 1px;
+}
+
+.bookmark.selected::before {
+    background-position: -59px -19px;
+}
+
+.link {
+    color: #2fa7cd;
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: #101010;
+}
+
+.link::before {
+    content: '› ';
+    text-decoration: none;
+    vertical-align: text-bottom;
+    margin: 0 3px 1px 0;
+    display: inline-block;
+}
+
+
+.delete::before {
+    content: '';
+    width: 13px;
+    height: 13px;
+    background: url('../../img/sprite.png');
+    background-size: 1024px 1024px;
+    background-position: -78px 0;
+    display: inline-block;
+    vertical-align: text-bottom;
+    margin: 0 8px 1px 0;
+}
+
+.delete:hover {
+    color: #cd3e2f;
+}
+
+.btn.full-frame {
+    display: block;
+    padding: 16px 0;
+}
+
+.btn.add::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background: url('../../img/sprite.png');
+    background-size: 1024px 1024px;
+    background-position: -91px 0;
+    display: inline-block;
+    vertical-align: text-bottom;
+    margin: 0 8px 1px 0;
+}
+
+.btn.add:hover::before {
+    background-position: -106px 0;
+}
+
+.full-frame.add::before {
+    margin-right: 18px;
+}

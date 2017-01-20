@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>720°</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link type="text/css" href="res/css/screen.css" rel="stylesheet" />
+    
+    <link type="text/css" href="res/css/controls/general.css" rel="stylesheet" />
+    <link type="text/css" href="res/css/controls/btn.css" rel="stylesheet" />
+    <!--<link type="text/css" href="res/css/controls/menu.css" rel="stylesheet" />-->
+    <link type="text/css" href="res/css/controls/nav.css" rel="stylesheet" />
+        <!--<link type="text/css" href="res/css/controls/switch.css" rel="stylesheet" />
+        <link type="text/css" href="res/css/controls/form.css" rel="stylesheet" />-->
+
+        <script type="text/javascript" src="res/js/jQuery.js" charset="utf-8"></script>
+        <script src="res/js/jquery.sortElements.js"></script>
+        <script type="text/javascript" src="res/js/main.js" charset="utf-8"></script>
+
+        
+    </head>
+    <body>
+        
+        <header>
+            <div>
+                <div class="block justify-layout">
+                    <div>
+                        <a class="toggle btn menu circular nav-toggle" href=""></a>
+                        <a href="/" id="logo" title="720° Analytics"></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <main>
+            
+
+            
+            <div class="block">
+                <h1>720° Interview</h1>
+            </div>
+            
+            <section>
+                <div>
+
+                    <h2>Instructions: modify the source code of this page to meet the following tasks</h2>
+                    
+                    <hr/>
+
+                    <ul class="list">
+                        <li>AJAX
+                            <ul>
+                                <li>
+                                    Load weather data from cities laid within definite circle from Helsinki center (GPS: 60.169847, 24.938340). Limit API response to 30 entries. Use OpenWeatherMap API, jQuery library and its AJAX methods. The library is included in this project already.<br/><br/>
+                                    - <a target="_blank" href="https://openweathermap.org/current">API Doc link</a><br/>
+                                    - API key: 0b96668615bb92609290fa424719a2ea (<a target="_blank" href="https://openweathermap.org/appid">How to use API key in API call</a>)
+                                </li>
+                                <li>
+                                    Populate weather table with weather data (City, GPS location [latitude, longitude], Temperature [°C] and Wind speed [m/s] columns).
+                                </li>
+                                <li>
+                                    Reload weather data when the Reload button is clicked.
+                                </li>
+                                <li>
+                                    Show a "Loading..." message when the weather API call is in progress. You can use &lt;caption/&gt; element for this purpose.
+                                </li>
+                                <li>
+                                    Clear the weather table and show "An error occured, please try again later" message if any error appears during the weather API call (e.g. if there is no internet connectivity and API server is not reachable).
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Content
+                            <ul>
+                                <li>
+                                    Sort weather table by city ascendant by default.
+                                </li>
+                                <li>
+                                    Implement a sorting feature for weather table. If any column title is clicked then sort the table by this column ascendant. If the column is clicked for the second time then sort the table descendant. Sorting by GPS location means sorting by distance from Helsinki center. You can use calculateDistance() function for this purpose, it is located in main.js.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>CSS
+                            <ul>
+                                <li>
+                                    Add a highlight effect (#ededed background color) to every weather table tbody row when it is hovered.
+                                </li>
+                                <li>
+                                    Highlight even rows in weather table (#f9f9f9 background color).
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Responsive design
+                            <ul>
+                                <li>
+                                    Hide GPS Location column if window width <= 1024px
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </section>
+            
+            <div class="block justify-layout">
+                
+                <div>
+                    <h2>Weather table</h2>
+                </div>
+                
+                <div class="controls">
+                    <button class="btn" id="reload-btn">Reload</button>
+                </div>
+
+                
+            </div>
+            
+            <section>
+                <div>
+                    <table class="list" id="weather-table">
+                        <caption id="message">Loading...</caption>
+                        <thead>
+                            <tr>
+                                <th class="sorter active" data-sorter-name="city" id="city">City</th>
+                                <th class="sorter col-1" data-sorter-name="location" id="gps">GPS location</th>
+                                <th class="sorter" data-sorter-name="temperature" id="temp">Temperature</th>
+                                <th class="sorter" data-sorter-name="wind" id="wind">Wind speed</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr> 
+                                <td></td> 
+                                <td></td> 
+                                <td></td> 
+                                <td></td> 
+                            </tr> 
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+            <nav>
+                <div>
+                    <ul>
+                        <li class="selected"><a class="active" href="">720° Interview</a></li>
+                    </ul>
+                </div>
+            </nav>
+            
+        </main>
+        
+        
+        
+        <footer>
+            <div>
+                <div>
+                    <span>©</span> <strong>720˚</strong> <span>All Rights Reserved</span><span class="divider">&nbsp;|&nbsp;</span><a href="">Terms and conditions</a>
+                </div>
+            </div>
+        </footer>
+        
+    </body>
+    
+    </html>
